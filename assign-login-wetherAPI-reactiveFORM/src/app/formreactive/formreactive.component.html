@@ -1,0 +1,14 @@
+<div>
+    <form [formGroup] = "signUpForm" (ngSubmit) = "onSubmit()">
+        <div class="row">
+            <div class="col-xs-12">
+                <label for="fName"> First Name</label>
+                <input type="text" class="form-control"
+                formControlName="fName">
+            </div>
+        </div>
+        <div>
+            <button class="btn btn-success">Submit</button>
+        </div>
+    </form>
+</div>

@@ -1,0 +1,18 @@
+<p>App component</p>
+<div >
+  <app-homepage (homepageemitter) = "loadFormcomp()"
+  *ngIf = "showcomponent === 'home'"></app-homepage>
+
+</div>
+
+<div >
+<app-formreactive
+*ngIf = "showcomponent === 'form'" (formEmitter) = "showcomponent = 'welcome'"
+(formEmitter) = "sendToWelcomePage($event)"
+></app-formreactive>
+</div>
+<div>
+  <app-welcomepage 
+  *ngIf = "showcomponent === 'welcome'"
+  [firstName] = "firstName"></app-welcomepage>
+</div>
